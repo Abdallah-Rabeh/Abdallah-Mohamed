@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing-: border-box;
+    -moz-box-sizing-: border-box;
+    -ms-box-sizing-:border-box;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html{
+scroll-behavior: smooth;  
+
+}
+body{  
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+button:focus
+{
+    outline: none;
+}
+#Gallary {
+    margin-top: 10px;
+  }
+  
+  #Gallary .item {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  #Gallary .item .layout {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition-duration: 0.5s;
+  }
+  
+  #Gallary .item i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0;
+    transition-duration: 0.5s;
+    z-index: 2;
+  }
+  
+  #Gallary .item:hover .layout,
+  #Gallary .item:hover i {
+    opacity: 1;
+  }
+  
+  #Gallary .item img {
+    transition-duration: 0.5s;
+  }
+  
+  #Gallary .item:hover img {
+    transform: scale(1.2);
+  }
+  
+  #Gallary .item i:hover {
+    color: #0ff;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  .popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition-duration: 0.5s;
+  }
+  
+  .popup .box {
+    width: 500px;
+    height: 500px;
+    position: relative;
+  }
+  
+  .popup i {
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .popup .box i.fa-arrow-alt-circle-right {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  .popup .box i.fa-arrow-alt-circle-left {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  .popup .box i.fa-times-circle {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .popup .indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .popup .indicators ul {
+    display: flex;
+  }
+  
+  .popup .indicators ul li {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .popup .indicators ul li.active {
+    background-color: #fff;
+    color: #000;
+  }
+  
